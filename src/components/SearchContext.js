@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import {getApiData} from './api.data'
+import axios from "axios";
 
 export const SearchContext = createContext();
 
@@ -19,9 +20,11 @@ function SearchContextProvider(props) {
 		if (landResult) qstr = qstr + "&land_success=" + landResult;
 
 		setLoading(true);
-
+		
 		const apiData = await getApiData(qstr);
 		setSearchData(apiData);
+		
+			
 
 		setLoading(false);
 

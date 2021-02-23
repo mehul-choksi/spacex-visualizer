@@ -4,10 +4,16 @@ import { SearchContext } from './SearchContext'
 
 function LaunchDetail(props) {
 
-    const { fetchData, searchData } = useContext(SearchContext)
-    {console.log(searchData)}
+    const { searchData } = useContext(SearchContext)
+    {
+        console.log(searchData.length)
+    }
+    // const data = searchData[props.keyIndex];
+
     return (
         <div>
+            <h1>Test</h1>
+            {/* <h1>data.mission_name</h1> */}
             
         </div>
     )

@@ -12,8 +12,6 @@ export const Launches = () => {
         return <Spinner/>
 
     const transformData =() => {
-        
-
         let launches = []
 
         for(let key in searchData){
@@ -36,16 +34,19 @@ export const Launches = () => {
               'launch_date' : searchData[key]['launch_date_utc'],
               'launch_success' : searchData[key]['launch_success'],
               'launch_site' : searchData[key]['launch_site']['site_name'],
-              'land_success' : land_success
+              'land_success' : land_success,
+              'rocket' : searchData[key]['rocket']['rocket_name'] + ' | ' + searchData[key]['rocket']['rocket_type'],
+              'article_link' : searchData[key]['links']['article_link'],
+              'wikipedia_link' : searchData[key]['links']['wikipedia'],
+              'youtube_link' : searchData[key]['links']['youtube'],
+              'reddit_link' : searchData[key]['links']['reddit_launch'],
+              'details' : searchData[key].details
             });
       }
+      
       return launches;
 
-    //   searchData.map((item, idx) => {
-    //       key : idx,
-
-    //   })
-        
+     
     }
 
     return (

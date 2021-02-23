@@ -12,6 +12,15 @@
   margin:10px;
 }
 
+.detail {
+  color: "darkgrey";
+  font-size: small;
+}
+
+.detail :hover {
+  transform: scale(0.5) 
+}
+
 /* Style the form - display items horizontally */
 .form-inline {
   display: flex;
@@ -187,7 +196,7 @@ img {
 
 .zoom :hover{
   transition: transform .5s;
-  transform : scale(1.1);
+  transform : scale(1.05);
   background-color: #f0fcfc;
 }
 
